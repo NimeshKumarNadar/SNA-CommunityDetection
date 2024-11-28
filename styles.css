@@ -1,136 +1,125 @@
-/* Body and Overall Styling */
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body and page setup */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-  color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Header Section */
 header {
-  background-color: #0073e6;
-  color: #fff;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #4CAF50; /* Greenish color */
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  position: relative;
+  z-index: 10; /* Ensure header stays above other sections */
 }
 
-.header-container {
+header .header-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header-details h1 {
-  font-size: 2rem;
-  margin: 0 0 0.5rem;
+header .header-details h1 {
+  font-size: 36px;
 }
 
-.header-details p {
-  margin: 0.3rem 0;
-  font-size: 1rem;
+header .header-details p {
+  font-size: 18px;
 }
 
-.header-members {
-  text-align: right;
-}
-
-.header-members h2 {
-  font-size: 1.5rem;
-  margin: 0 0 0.5rem;
-}
-
-.header-members ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header-members ul li {
-  margin: 0.2rem 0;
-  font-size: 1rem;
-}
-
-/* Layout for Sidebar and Content */
-.container {
+/* Main Content Section (Body) */
+.main-container {
   display: flex;
+  flex: 1;
+  margin-top: 60px; /* Ensure content isn't hidden behind header */
   flex-direction: row;
-  height: calc(100vh - 70px); /* Subtract header height */
 }
 
+/* Sidebar Menu */
 .sidebar {
+  background-color: #333;
+  color: white;
   width: 250px;
-  background-color: #003d99;
-  color: #fff;
-  padding: 1rem;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
+  height: calc(100vh - 60px); /* Take full height minus header height */
+  padding: 20px;
+  position: fixed; /* Keep it fixed on the left side */
+  top: 60px; /* Position it directly below the header */
+  left: 0;
+  z-index: 5; /* Ensure sidebar is below header */
 }
 
 .sidebar h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .sidebar ul {
   list-style-type: none;
-  padding: 0;
 }
 
 .sidebar ul li {
-  margin-bottom: 1rem;
+  margin-bottom: 15px;
 }
 
 .sidebar ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .sidebar ul li a:hover {
-  color: #ffcc00;
+  background-color: #575757;
 }
 
+/* Main content section */
+.main-content {
+  flex: 1;
+  margin-left: 270px; /* Make space for sidebar */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 0; /* No margin at top to align with sidebar */
+}
+
+/* Content container */
 .content {
-  flex-grow: 1;
-  padding: 2rem;
-  overflow-y: auto;
-  background-color: #fff;
+  padding: 20px;
+  font-size: 18px;
 }
 
-.content h2 {
-  color: #0073e6;
-  margin-top: 0;
-  font-size: 1.8rem;
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.content p {
-  line-height: 1.6;
-  margin: 1rem 0;
+ul li {
+  margin: 10px 0;
 }
 
-.content a {
-  color: #0073e6;
-  text-decoration: underline;
-  transition: color 0.3s;
+ul li a {
+  font-size: 16px;
+  color: #4CAF50;
 }
 
-.content a:hover {
-  color: #ff6600;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    box-shadow: none;
-  }
-
-  .content {
-    padding: 1rem;
-  }
+/* Style for the active sidebar item */
+.sidebar ul li a.active {
+  background-color: #4CAF50;
+  color: white;
 }

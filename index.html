@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final Submission - Community Detection</title>
+  <title>G6</title>
   <link rel="stylesheet" href="styles.css">
   <script src="scripts.js" defer></script>
 </head>
@@ -12,41 +12,34 @@
   <header>
     <div class="header-container">
       <div class="header-details">
-        <h1>Community Detection Algorithms</h1>
-        <p>Subject: Social Network Analysis</p>
-        <p>Professor: Dr. Smith</p>
-      </div>
-      <div class="header-members">
-        <h2>Group Members</h2>
-        <ul>
-          <li>Nimesh</li>
-          <li>Ravi</li>
-          <li>Priya</li>
-          <li>Ankit</li>
-          <li>Sana</li>
-        </ul>
+        <h2>Community Detection Algorithms</h2>
+        <p>CA7A2: Social Network Analysis</p>
+        <p>Dr. S.R. Balasundaram</p>
       </div>
     </div>
   </header>
 
-  <!-- Main Content Section -->
-  <div class="container">
+  <!-- Main Content Section (Body) -->
+  <div class="main-container">
     <!-- Sidebar Menu -->
     <div class="sidebar">
       <h2>Menu</h2>
       <ul>
-        <li><a href="#" onclick="loadContent('student1')">Algorithm 1 - Nimesh</a></li>
-        <li><a href="#" onclick="loadContent('student2')">Algorithm 2 - Ravi</a></li>
-        <li><a href="#" onclick="loadContent('student3')">Algorithm 3 - Priya</a></li>
-        <li><a href="#" onclick="loadContent('student4')">Algorithm 4 - Ankit</a></li>
-        <li><a href="#" onclick="loadContent('student5')">Algorithm 5 - Sana</a></li>
+        <li><a href="#" onclick="loadGroupMembers()">Group Details</a></li>
+        <li><a href="#" onclick="loadContent('student1')">Clique Percolation</a></li>
+        <li><a href="#" onclick="loadContent('student4')">Label Propagation</a></li>
+	<li><a href="#" onclick="loadContent('student2')">Girvan Newman</a></li>
+        <li><a href="#" onclick="loadContent('student3')">Louvain</a></li>
+        <li><a href="#" onclick="loadContent('student5')">Walktrap</a></li>
       </ul>
     </div>
 
-    <!-- Main Content -->
-    <div class="content" id="content">
-      <h2>Welcome!</h2>
-      <p>Select a student from the menu to explore their algorithm details, PDFs, and runnable code.</p>
+    <!-- Main Content Section -->
+    <div class="main-content">
+      <div class="content" id="content">
+        <h2>Welcome!</h2>
+        <p>Select an algorithm from the side menu to explore the algorithm details, and runnable code links.<br>Group details can also be accessed via the side menu.</p>
+      </div>
     </div>
   </div>
 </body>
