@@ -5,41 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Submissions</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Final Submissions</h1>
-    <p>Subject: [Subject Name]</p>
-    <p>Professor: [Professor Name]</p>
-    <p>Group Name: [Group Name]</p>
-    <p>Group Members: [Member 1, Member 2, Member 3, Member 4, Member 5]</p>
+    <div class="header-content">
+      <h1>Final Submissions</h1>
+      <p><strong>Subject:</strong> [Subject Name]</p>
+      <p><strong>Professor:</strong> [Professor Name]</p>
+      <p><strong>Group Name:</strong> [Group Name]</p>
+      <p><strong>Group Members:</strong> [Member 1, Member 2, Member 3, Member 4, Member 5]</p>
+    </div>
   </header>
   <div class="container">
     <nav class="sidebar">
       <h2>Algorithms</h2>
       <ul>
-        <li>
-          <a href="#" onclick="loadContent('student1')">Algorithm 1 - Student 1</a>
-        </li>
-        <li>
-          <a href="#" onclick="loadContent('student2')">Algorithm 2 - Student 2</a>
-        </li>
-        <li>
-          <a href="#" onclick="loadContent('student3')">Algorithm 3 - Student 3</a>
-        </li>
-        <li>
-          <a href="#" onclick="loadContent('student4')">Algorithm 4 - Student 4</a>
-        </li>
-        <li>
-          <a href="#" onclick="loadContent('student5')">Algorithm 5 - Student 5</a>
-        </li>
+        <li><a href="#" onclick="loadContent('student1')">Algorithm 1 - Student 1</a></li>
+        <li><a href="#" onclick="loadContent('student2')">Algorithm 2 - Student 2</a></li>
+        <li><a href="#" onclick="loadContent('student3')">Algorithm 3 - Student 3</a></li>
+        <li><a href="#" onclick="loadContent('student4')">Algorithm 4 - Student 4</a></li>
+        <li><a href="#" onclick="loadContent('student5')">Algorithm 5 - Student 5</a></li>
       </ul>
     </nav>
     <main id="content">
       <h2>Welcome!</h2>
-      <p>Select an algorithm to view details.</p>
+      <p>Select an algorithm from the menu to view details.</p>
     </main>
   </div>
+  <footer>
+    <p>© 2024 [Your Group Name]. All rights reserved.</p>
+  </footer>
   <script src="scripts.js"></script>
 </body>
 </html>
