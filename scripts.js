@@ -1,45 +1,66 @@
-function loadContent(studentId) {
-  const content = {
-    student1: `
-      <h2>Algorithm 1 - Student 1</h2>
-      <p><strong>Introduction:</strong> This algorithm focuses on [brief description].</p>
-      <p><a href="pdfs/algorithm1.pdf" target="_blank" style="color: #0073e6; text-decoration: underline;">View PDF</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook1" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 1</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook2" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 2</a></p>
-    `,
-    student2: `
-      <h2>Algorithm 2 - Student 2</h2>
-      <p><strong>Introduction:</strong> This algorithm solves [brief description].</p>
-      <p><a href="pdfs/algorithm2.pdf" target="_blank" style="color: #0073e6; text-decoration: underline;">View PDF</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook3" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 1</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook4" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 2</a></p>
-    `,
-    student3: `
-      <h2>Algorithm 3 - Student 3</h2>
-      <p><strong>Introduction:</strong> This algorithm improves [brief description].</p>
-      <p><a href="pdfs/algorithm3.pdf" target="_blank" style="color: #0073e6; text-decoration: underline;">View PDF</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook5" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 1</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook6" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 2</a></p>
-    `,
-    student4: `
-      <h2>Algorithm 4 - Student 4</h2>
-      <p><strong>Introduction:</strong> This algorithm demonstrates [brief description].</p>
-      <p><a href="pdfs/algorithm4.pdf" target="_blank" style="color: #0073e6; text-decoration: underline;">View PDF</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook7" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 1</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook8" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 2</a></p>
-    `,
-    student5: `
-      <h2>Algorithm 5 - Student 5</h2>
-      <p><strong>Introduction:</strong> This algorithm analyzes [brief description].</p>
-      <p><a href="pdfs/algorithm5.pdf" target="_blank" style="color: #0073e6; text-decoration: underline;">View PDF</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook9" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 1</a></p>
-      <p><a href="https://colab.research.google.com/path_to_notebook10" target="_blank" style="color: #0073e6; text-decoration: underline;">Run on Google Colab - Example 2</a></p>
-    `,
-  };
-
-  // Load the selected student's content or show an error if not found
-  document.getElementById('content').innerHTML = content[studentId] || `
-    <h2>Not Found</h2>
-    <p>The requested content is not available.</p>
-  `;
+// Sample JavaScript for loading content dynamically
+function loadContent(student) {
+  let content = document.getElementById('content');
+  
+  if (student === 'student1') {
+    content.innerHTML = `
+      <h2>Algorithm 1 - Nimesh</h2>
+      <p>This is a brief description of the first algorithm. The algorithm is used to perform a specific task related to community detection in social networks.</p>
+      <p><strong>Introduction PDF:</strong> <a href="pdfs/algorithm1_intro.pdf" target="_blank">View PDF</a></p>
+      <p><strong>Run Code:</strong></p>
+      <ul>
+        <li><a href="https://colab.research.google.com/1" target="_blank">Google Colab Link 1</a></li>
+        <li><a href="https://colab.research.google.com/2" target="_blank">Google Colab Link 2</a></li>
+        <li><a href="https://colab.research.google.com/3" target="_blank">Google Colab Link 3</a></li>
+      </ul>
+    `;
+  } else if (student === 'student2') {
+    content.innerHTML = `
+      <h2>Algorithm 2 - Ravi</h2>
+      <p>This is a brief description of the second algorithm, with its own specific details and functionality related to community detection.</p>
+      <p><strong>Introduction PDF:</strong> <a href="pdfs/algorithm2_intro.pdf" target="_blank">View PDF</a></p>
+      <p><strong>Run Code:</strong></p>
+      <ul>
+        <li><a href="https://colab.research.google.com/4" target="_blank">Google Colab Link 1</a></li>
+        <li><a href="https://colab.research.google.com/5" target="_blank">Google Colab Link 2</a></li>
+        <li><a href="https://colab.research.google.com/6" target="_blank">Google Colab Link 3</a></li>
+      </ul>
+    `;
+  } else if (student === 'student3') {
+    content.innerHTML = `
+      <h2>Algorithm 3 - Priya</h2>
+      <p>This algorithm tackles a specific problem in community detection. Here's how it works and how to run it.</p>
+      <p><strong>Introduction PDF:</strong> <a href="pdfs/algorithm3_intro.pdf" target="_blank">View PDF</a></p>
+      <p><strong>Run Code:</strong></p>
+      <ul>
+        <li><a href="https://colab.research.google.com/7" target="_blank">Google Colab Link 1</a></li>
+        <li><a href="https://colab.research.google.com/8" target="_blank">Google Colab Link 2</a></li>
+        <li><a href="https://colab.research.google.com/9" target="_blank">Google Colab Link 3</a></li>
+      </ul>
+    `;
+  } else if (student === 'student4') {
+    content.innerHTML = `
+      <h2>Algorithm 4 - Ankit</h2>
+      <p>This is the fourth algorithm in the community detection project. Here are the details and how to run it.</p>
+      <p><strong>Introduction PDF:</strong> <a href="pdfs/algorithm4_intro.pdf" target="_blank">View PDF</a></p>
+      <p><strong>Run Code:</strong></p>
+      <ul>
+        <li><a href="https://colab.research.google.com/10" target="_blank">Google Colab Link 1</a></li>
+        <li><a href="https://colab.research.google.com/11" target="_blank">Google Colab Link 2</a></li>
+        <li><a href="https://colab.research.google.com/12" target="_blank">Google Colab Link 3</a></li>
+      </ul>
+    `;
+  } else if (student === 'student5') {
+    content.innerHTML = `
+      <h2>Algorithm 5 - Sana</h2>
+      <p>The fifth algorithm tackles another aspect of community detection. Here are its details and how to execute it.</p>
+      <p><strong>Introduction PDF:</strong> <a href="pdfs/algorithm5_intro.pdf" target="_blank">View PDF</a></p>
+      <p><strong>Run Code:</strong></p>
+      <ul>
+        <li><a href="https://colab.research.google.com/13" target="_blank">Google Colab Link 1</a></li>
+        <li><a href="https://colab.research.google.com/14" target="_blank">Google Colab Link 2</a></li>
+        <li><a href="https://colab.research.google.com/15" target="_blank">Google Colab Link 3</a></li>
+      </ul>
+    `;
+  }
 }

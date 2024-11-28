@@ -3,39 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final Submissions</title>
+  <title>Final Submission - Community Detection</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <div class="header-content">
-      <h1>Final Submissions</h1>
-      <p><strong>Subject:</strong> [Subject Name]</p>
-      <p><strong>Professor:</strong> [Professor Name]</p>
-      <p><strong>Group Name:</strong> [Group Name]</p>
-      <p><strong>Group Members:</strong> [Member 1, Member 2, Member 3, Member 4, Member 5]</p>
+    <div class="header-container">
+      <div class="header-details">
+        <h1>Community Detection Algorithms</h1>
+        <p>Subject: Social Network Analysis</p>
+        <p>Professor: Dr. Smith</p>
+      </div>
+      <div class="header-members">
+        <h2>Group Members</h2>
+        <ul>
+          <li>Nimesh</li>
+          <li>Ravi</li>
+          <li>Priya</li>
+          <li>Ankit</li>
+          <li>Sana</li>
+        </ul>
+      </div>
     </div>
   </header>
+
+  <!-- Main Content Section -->
   <div class="container">
-    <nav class="sidebar">
-      <h2>Algorithms</h2>
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+      <h2>Menu</h2>
       <ul>
-        <li><a href="#" onclick="loadContent('student1')">Algorithm 1 - Student 1</a></li>
-        <li><a href="#" onclick="loadContent('student2')">Algorithm 2 - Student 2</a></li>
-        <li><a href="#" onclick="loadContent('student3')">Algorithm 3 - Student 3</a></li>
-        <li><a href="#" onclick="loadContent('student4')">Algorithm 4 - Student 4</a></li>
-        <li><a href="#" onclick="loadContent('student5')">Algorithm 5 - Student 5</a></li>
+        <li><a href="#" onclick="loadContent('student1')">Algorithm 1 - Nimesh</a></li>
+        <li><a href="#" onclick="loadContent('student2')">Algorithm 2 - Ravi</a></li>
+        <li><a href="#" onclick="loadContent('student3')">Algorithm 3 - Priya</a></li>
+        <li><a href="#" onclick="loadContent('student4')">Algorithm 4 - Ankit</a></li>
+        <li><a href="#" onclick="loadContent('student5')">Algorithm 5 - Sana</a></li>
       </ul>
-    </nav>
-    <main id="content">
+    </div>
+
+    <!-- Main Content -->
+    <div class="content" id="content">
       <h2>Welcome!</h2>
-      <p>Select an algorithm from the menu to view details.</p>
-    </main>
+      <p>Select a student from the menu to explore their algorithm details, PDFs, and runnable code.</p>
+    </div>
   </div>
-  <footer>
-    <p>© 2024 [Your Group Name]. All rights reserved.</p>
-  </footer>
-  <script src="scripts.js"></script>
 </body>
 </html>
